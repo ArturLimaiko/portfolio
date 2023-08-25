@@ -26,7 +26,7 @@ export const Footer = () => {
                         </SocialIconLink>
                     </SocialIconItem>
                 </SocialList>
-                <Copyright>Designed and built by Limaiko A.A with Love & Coffee</Copyright>
+                <Copyright>©2023 Designed and built by Limaiko A.A </Copyright>
             </FlexWrapper>
         </StyledFooter>
     );
