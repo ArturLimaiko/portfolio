@@ -14,7 +14,7 @@ export const ContactsInfo = (props: ContactsInfoPropsType) => {
                 <li>
                     <Icon width={"50px"} height={"50px"} iconId={'phone'} fill={"white"}/>
                     <ContactTitle>phone</ContactTitle>
-                    <ContactText>+1 000 992 2233</ContactText>
+                    <ContactText>+1 000 992 2222</ContactText>
                 </li>
                 <li>
                     <Icon width={"50px"} height={"50px"} iconId={'mail'} fill={"white"}/>
@@ -24,7 +24,7 @@ export const ContactsInfo = (props: ContactsInfoPropsType) => {
                 <li>
                     <Icon width={"50px"} height={"50px"} iconId={'marker'} fill={"white"}/>
                     <ContactTitle>adress</ContactTitle>
-                    <ContactText>any adress New York Sity</ContactText>
+                    <ContactText> New-York Sity</ContactText>
                     </li>
             </ul>
         </ContactInfo>

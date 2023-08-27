@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Icon} from "../../../../components/icon/Icon";
 
 
 type WorkPropsType = {
@@ -17,8 +18,13 @@ export const Work = (props: WorkPropsType) => {
             <WorkDescription>{props.text}</WorkDescription>
             <WorkAbout>{props.about}</WorkAbout>
             <WorkLinks>
-                <WorkLink href={"#"}>Live Preview</WorkLink>
-                <WorkLink href={"#"}>View Code</WorkLink>
+
+                <WorkLink href={"#"}>
+                    <Icon iconId={"link-chain"}/>
+                    Live Preview</WorkLink>
+                <WorkLink href={"#"}>
+                    <Icon iconId={"link-github"}/>
+                    View Code</WorkLink>
             </WorkLinks>
         </StyledWork>
     );
@@ -57,5 +63,5 @@ const WorkLinks = styled.div`
 `
 
 const WorkLink = styled.a`
-  color: #cccccc;
+  color: #ffffff;
 `
