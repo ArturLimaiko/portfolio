@@ -9,7 +9,7 @@ import {Button} from "../../../components/Button";
 export const Contact = () => {
     return (
         <StyledContacts>
-            <SectionTitle>Contact me</SectionTitle>
+            <SectionTitle>Get in touch</SectionTitle>
             <SectionText>For any questions please mail me:</SectionText>
             <FormContainer>
                 <StyledForm>
@@ -25,7 +25,7 @@ export const Contact = () => {
                     <Field as={"textarea"} placeholder={"Your message"}/>
                     <Button type={"submit"}>Send message</Button>
                 </StyledForm>
-                <ContactsInfo contactIcon={"phone"}/>
+                <ContactsInfo></ContactsInfo>
             </FormContainer>
 
         </StyledContacts>

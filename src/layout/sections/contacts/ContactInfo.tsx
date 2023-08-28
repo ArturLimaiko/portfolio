@@ -2,30 +2,29 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
 
-type ContactsInfoPropsType = {
-    contactIcon: string
-}
 
-export const ContactsInfo = (props: ContactsInfoPropsType) => {
+export const ContactsInfo = () => {
     return (
         <ContactInfo>
             <Img/>
             <ul>
                 <li>
-                    <Icon width={"50px"} height={"50px"} iconId={'phone'} fill={"white"}/>
-                    <ContactTitle>phone</ContactTitle>
-                    <ContactText>+1 000 992 2222</ContactText>
+                    <ContactLink>
+                        <Icon iconId={"#"}/>
+                        +1 000 992 2222
+                    </ContactLink>
                 </li>
                 <li>
-                    <Icon width={"50px"} height={"50px"} iconId={'mail'} fill={"white"}/>
-                    <ContactTitle>email</ContactTitle>
-                    <ContactText>info@domainname.com</ContactText>
+                    <ContactLink>
+                        <Icon iconId={"#"}/>
+                        info@domainname.com
+                    </ContactLink>
                 </li>
                 <li>
-                    <Icon width={"50px"} height={"50px"} iconId={'marker'} fill={"white"}/>
-                    <ContactTitle>adress</ContactTitle>
-                    <ContactText> New-York Sity</ContactText>
-                    </li>
+                    <ContactLink> <Icon iconId={"#"}/>
+                        New-York Sity
+                    </ContactLink>
+                </li>
             </ul>
         </ContactInfo>
     );
@@ -42,10 +41,7 @@ const ContactInfo = styled.div`
   width: 100%;
 `
 
-const ContactTitle = styled.h4`
-color:#cccccc;
-`
-
-const ContactText = styled.p`
-  color:#cccccc;
+const ContactLink = styled.a`
+  color: #cccccc;
+  cursor: pointer;
 `

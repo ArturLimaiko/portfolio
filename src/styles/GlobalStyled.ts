@@ -19,12 +19,13 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: ${Theme.colors.primaryBg};
+    color:${Theme.colors.font};
   }
 
   section {
     padding: 100px 0;
   }
-  
+
   a {
     text-decoration: none;
   }
@@ -36,5 +37,40 @@ export const GlobalStyle = createGlobalStyle`
   button {
     background-color: unset;
     border: none;
+    font-family: "Poppins", "sans-serif";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 3px;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-family: "Poppins", "sans-serif";
+    font-size: 58px;
+    line-height: 70px;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-family: "Poppins", "sans-serif";
+    font-size: 58px;
+    line-height: 70px;
+    letter-spacing: -1px;
+  }
+
+  h3 {
+    font-family: "Poppins", "sans-serif";
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 26px;
+  }
+
+  p {
+    font-family: "Poppins", "sans-serif";
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 26px;
   }
 `

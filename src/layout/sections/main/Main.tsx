@@ -71,22 +71,13 @@ const Photo = styled.img`
 
 const MainTitle = styled.h1`
   color: #D9D9D9;
-  font-weight: bold;
-  font-family: "Poppins", "sans-serif";
-  font-size: 58px;
-  line-height: 70px;
-  letter-spacing: -1px;
+
 `
 
 const Name = styled.h2`
   background: linear-gradient(270deg, rgba(231, 15, 170, 1) 39%, rgba(0, 192, 253, 1) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  font-family: "Poppins", "sans-serif";
-  font-size: 58px;
-  line-height: 70px;
-  letter-spacing: -1px;
   margin: 10px 0;
 `
 
