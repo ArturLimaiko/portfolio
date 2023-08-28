@@ -21,6 +21,10 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${Theme.colors.primaryBg};
   }
 
+  section {
+    padding: 100px 0;
+  }
+  
   a {
     text-decoration: none;
   }

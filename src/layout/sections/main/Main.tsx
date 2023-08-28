@@ -14,7 +14,7 @@ export const Main = () => {
                     <div>
                         <Welcome>Hello👋,</Welcome>
                         <Name>My name is <br/>Artur Limaiko</Name>
-                        <MainTitle>A am web developer</MainTitle>
+                        <MainTitle>A web developer</MainTitle>
                     </div>
                     <Frame>
                         <Photo src={photo} alt="photo developer"/>
