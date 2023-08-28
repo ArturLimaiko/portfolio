@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
 
-
 export const ContactsInfo = () => {
     return (
         <ContactInfo>
