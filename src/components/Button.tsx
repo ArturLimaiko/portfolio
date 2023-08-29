@@ -14,7 +14,7 @@ export const Button = styled.button`
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 
   &:hover {
     background: ${Theme.colors.fontDark};

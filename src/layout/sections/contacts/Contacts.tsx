@@ -30,7 +30,7 @@ export const Contact = () => {
                         <FieldTextArea as={"textarea"} placeholder={"Your message"}/>
                         <Button type={"submit"}>Send message</Button>
                     </StyledForm>
-                    <ContactsInfo></ContactsInfo>
+                    <ContactsInfo/>
                 </FormContainer>
             </Container>
         </StyledContacts>
@@ -73,18 +73,27 @@ const Field = styled.input`
   color: ${Theme.colors.font};
   font-weight: normal;
   font-family: "Poppins", "sans-serif";
-  font-size: 15px;
+  font-size: 19px;
   line-height: 26px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   box-shadow: 8px 8px 0 #000;
-
+  text-shadow: 3px 3px 3px #000;
+  
   &::placeholder {
-    color: ${Theme.colors.fontDark}
+    color: ${Theme.colors.fontDark};
   }
 
   &:hover {
+    background: #a7a7a7;
+    color: #000;
     cursor: pointer;
     box-shadow: 8px 8px 0 #363636;
+    text-shadow: 3px 3px 3px #363636;
+
+    &::placeholder {
+      color: #000;
+      text-shadow: 3px 3px 3px #363636;
+    }
   }
 
   &:focus-visible {
@@ -100,25 +109,41 @@ const FieldTextArea = styled.textarea`
   padding: 10px 20px;
   color: ${Theme.colors.font};
   font-family: "Poppins", "sans-serif";
-  font-size: 15px;
+  font-size: 17px;
   line-height: 26px;
   letter-spacing: 2px;
   border: 1px solid #000;
+  text-shadow: 3px 3px 3px #000;
 
   &::placeholder {
-    color: ${Theme.colors.fontDark}
+    color: ${Theme.colors.fontDark};
+  }
+
+  &:hover {
+    background: #a7a7a7;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 8px 8px 0 #363636;
+    text-shadow: 3px 3px 3px #363636;
+    
+    &::placeholder {
+    color: #000;
   }
 
   &:focus-visible{
     outline: 1px solid #000;
   }
-  
-
 `
 
 const Label = styled.label`
   color: #cccccc;
+  font-family: "Poppins", "sans-serif";
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: normal;
+  letter-spacing: 2px;
 `
+
 const WrapperInput = styled.div`
   display: flex;
   flex-direction: row;

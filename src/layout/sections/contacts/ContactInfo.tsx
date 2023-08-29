@@ -9,13 +9,13 @@ export const ContactsInfo = () => {
             <ul>
                 <li>
                     <ContactLink>
-                        <Icon iconId={"#"}/>
+                        <Icon iconId={"phone"} viewBox={"0 0 24 24"} fill={"#000"} width={"80"} height={"80"}/>
                         +1 000 992 2222
                     </ContactLink>
                 </li>
                 <li>
                     <ContactLink>
-                        <Icon iconId={"#"}/>
+                        <Icon iconId={"mail"} viewBox={"0 0 24 24"} fill={"#000"} width={"80"} height={"80"}/>
                         info@domainname.com
                     </ContactLink>
                 </li>
