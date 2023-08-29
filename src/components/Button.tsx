@@ -7,15 +7,12 @@ export const Button = styled.button`
   display: inline-block;
   padding: 10px 20px;
   text-transform: uppercase;
-  transition-duration: .3s;
-  transition-timing-function: cubic-bezier(.4, 0, 1, 1);
   background: #363636;
   color: ${Theme.colors.fontDark};
   box-shadow: 8px 8px 0 #000;
-  border-radius: 20px;
   font-family: "Poppins", "sans-serif";
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: normal;
+  font-size: 14px;
   line-height: 26px;
   letter-spacing: 3px;
 

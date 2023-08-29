@@ -52,6 +52,7 @@ const ImageWrapper = styled.div`
   position: relative;
 
   &:hover {
+
     &::before {
       position: absolute;
       content: "";
@@ -69,7 +70,8 @@ const ImageWrapper = styled.div`
       font-size: 14px;
       line-height: 26px;
       letter-spacing: 3px;
-      transition-duration: 0.1s;
+      transition-duration: .2s;
+      transition-timing-function: cubic-bezier(.4, 0, 1, 1);
     }
   }
 
