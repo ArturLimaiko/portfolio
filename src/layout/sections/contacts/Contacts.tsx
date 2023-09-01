@@ -18,14 +18,14 @@ export const Contact = () => {
                     <StyledForm>
                         <WrapperInput>
                             <Label> First name
-                                <Field placeholder={"Name"} type={"text"}/>
+                                <Field placeholder={"Name"}/>
                             </Label>
                             <Label> Your email
                                 <Field placeholder={"Email"} type={"email"}/>
                             </Label>
                         </WrapperInput>
                         <Label> Subject
-                            <Field placeholder={"Subject"} type={"text"}/>
+                            <Field placeholder={"Subject"}/>
                         </Label>
                         <FieldTextArea as={"textarea"} placeholder={"Your message"}/>
                         <Button type={"submit"}>Send message</Button>
@@ -65,7 +65,10 @@ const FormContainer = styled.div`
   gap: 50px;
 `
 
-const Field = styled.input`
+const Field = styled.input.attrs(({type, placeholder}) => ({
+    type: type || "text",
+    placeholder: placeholder || "placeholder",
+}))`
   width: 100%;
   padding: 10px 20px;
   background-color: ${Theme.colors.projectBg};
