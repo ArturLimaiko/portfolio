@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Icon} from "../../../components/icon/Icon";
 import {SectionText} from '../../../components/SectionText';
 import {Skill} from "./skill/Skill";
 import {Container} from '../../../components/Container';

@@ -18,16 +18,16 @@ export const Contact = () => {
                     <StyledForm>
                         <WrapperInput>
                             <Label> First name
-                                <Field placeholder={"Name"}/>
+                                <Field placeholder={"Name"} aria-placeholder={"Name"}/>
                             </Label>
                             <Label> Your email
-                                <Field placeholder={"Email"} type={"email"}/>
+                                <Field placeholder={"Email"} type={"email"} aria-placeholder={"Email"}/>
                             </Label>
                         </WrapperInput>
                         <Label> Subject
-                            <Field placeholder={"Subject"}/>
+                            <Field placeholder={"Subject"} aria-placeholder={"Subject"}/>
                         </Label>
-                        <FieldTextArea as={"textarea"} placeholder={"Your message"}/>
+                        <FieldTextArea as={"textarea"} placeholder={"Your message"} aria-placeholder={"Your message"}/>
                         <Button type={"submit"}>Send message</Button>
                     </StyledForm>
                     <ContactsInfo/>
