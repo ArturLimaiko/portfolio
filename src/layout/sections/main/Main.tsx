@@ -10,7 +10,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-around"}>
+                <FlexWrapper align={"center"} justify={"space-around"} margin={"120px 15px"}>
                     <div>
                         <Welcome>Hello👋,</Welcome>
                         <Name>My name is <br/>Artur Limaiko</Name>
@@ -26,11 +26,10 @@ export const Main = () => {
 };
 
 const StyledMain = styled.div`
-  min-height: 100vh;
   background-color: #191919;
   display: flex;
+  margin-top: 250px;
 `
-
 
 const Frame = styled.div`
   position: relative;

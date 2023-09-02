@@ -6,6 +6,7 @@ import instagram from '../../assets/images/instagram.svg'
 import telegram from '../../assets/images/telegram.svg'
 import linkedin from '../../assets/images/linkedin.svg'
 import {Container} from "../../components/Container";
+import {Theme} from "../../styles/Theme";
 
 
 export const Footer = () => {
@@ -19,7 +20,7 @@ export const Footer = () => {
                         <li><a href="#"><img src={telegram} width={"40"} height={"40"} alt="icon telegram"/></a></li>
                         <li><a href="#"><img src={linkedin} width={"40"} height={"40"} alt="icon linkedin"/></a></li>
                     </SocialList>
-                    <Copyright>©2023 Designed and built by Limaiko A.A </Copyright>
+                    <Copyright>©2023 Designed and built by <Span>Limaiko A.A </Span></Copyright>
 
                 </FlexWrapper>
             </Container>
@@ -48,5 +49,14 @@ const SocialList = styled.ul`
 `
 
 const Copyright = styled.small`
-
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: ${Theme.colors.fontDark};
+`
+const Span = styled.span`
+  background: linear-gradient(270deg,rgba(231,15,170,1) 39%,rgba(0,192,253,1) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `
