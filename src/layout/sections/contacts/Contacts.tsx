@@ -38,7 +38,6 @@ export const Contact = () => {
 };
 
 const StyledContacts = styled.section`
-
   ul {
     display: flex;
     flex-direction: column;
@@ -81,7 +80,7 @@ const Field = styled.input.attrs(({type, placeholder}) => ({
   letter-spacing: 3px;
   box-shadow: 8px 8px 0 #000;
   text-shadow: 3px 3px 3px #000;
-  
+
   &::placeholder {
     color: ${Theme.colors.fontDark};
   }
@@ -128,14 +127,14 @@ const FieldTextArea = styled.textarea`
     cursor: pointer;
     box-shadow: 8px 8px 0 #363636;
     text-shadow: 3px 3px 3px #363636;
-    
-    &::placeholder {
-    color: #000;
-  }
 
-  &:focus-visible{
-    outline: 1px solid #000;
-  }
+    &::placeholder {
+      color: #000;
+    }
+
+    &:focus-visible {
+      outline: 1px solid #000;
+    }
 `
 
 const Label = styled.label`

@@ -1,55 +1,52 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "../../components/icon/Icon";
 import {Logo} from "../../components/logo/Logo";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import instagram from '../../assets/images/instagram.svg'
+import telegram from '../../assets/images/telegram.svg'
+import linkedin from '../../assets/images/linkedin.svg'
+import {Container} from "../../components/Container";
+
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper justify={"space-around"} align={"center"}>
-                <Logo/>
-                <SocialList>
-                    <SocialIconItem>
-                        <SocialIconLink>
-                            <Icon  iconId={"footer-instagram"}/>
-                        </SocialIconLink>
-                    </SocialIconItem>
-                    <SocialIconItem>
-                        <SocialIconLink>
-                            <Icon  iconId={"telegram"}/>
-                        </SocialIconLink>
-                    </SocialIconItem>
-                    <SocialIconItem>
-                        <SocialIconLink>
-                            <Icon  iconId={"footer-linkedln"}/>
-                        </SocialIconLink>
-                    </SocialIconItem>
-                </SocialList>
-                <Copyright>©2023 Designed and built by Limaiko A.A </Copyright>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper justify={"space-between"} align={"center"}>
+                    <Logo/>
+                    <SocialList>
+                        <li><a href="#"><img src={instagram} width={"40"} height={"40"} alt="icon instagram"/></a></li>
+                        <li><a href="#"><img src={telegram} width={"40"} height={"40"} alt="icon telegram"/></a></li>
+                        <li><a href="#"><img src={linkedin} width={"40"} height={"40"} alt="icon linkedin"/></a></li>
+                    </SocialList>
+                    <Copyright>©2023 Designed and built by Limaiko A.A </Copyright>
+
+                </FlexWrapper>
+            </Container>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
-
+display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const SocialList = styled.ul`
   display: flex;
-  gap: 30px;
-`
+  flex-direction: row;
+  gap: 50px;
 
-const SocialIconItem = styled.li`
+  a:hover {
+    filter: drop-shadow(0px 10px 42px #fff);
+  }
 
-`
-
-const SocialIconLink = styled.a`
-
+  li a::before {
+    content: none;
+  }
 `
 
 const Copyright = styled.small`
 
 `
-

@@ -15,15 +15,6 @@ export const Menu = (props: { menuItems: Array<string> }) => {
                         <a href="#">{item}</a>
                     </li>
                 })}
-
-                <StyledHeaderIcon>
-                    <ul>
-                        <li><a href="#"><img src={instagram} width={"40"} height={"40"} alt="icon instagram"/></a></li>
-                        <li><a href="#"><img src={telegram} width={"40"} height={"40"} alt="icon telegram"/></a></li>
-                        <li><a href="#"><img src={linkedin} width={"40"} height={"40"} alt="icon linkedin"/></a></li>
-                    </ul>
-                </StyledHeaderIcon>
-
             </ul>
         </StyledMenu>
     );
@@ -65,15 +56,5 @@ const StyledMenu = styled.nav`
 
   a:hover::before {
     transform: scaleX(1);
-  }
-`
-
-const StyledHeaderIcon = styled.nav`
-  a:hover {
-    filter: drop-shadow(0px 10px 42px #fff);
-  }
-
-  li a::before {
-    content: none;
   }
 `
