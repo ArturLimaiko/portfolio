@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Theme} from "../../styles/Theme";
-import instagram from '../../assets/images/instagram.svg'
-import telegram from '../../assets/images/telegram.svg'
-import linkedin from '../../assets/images/linkedin.svg'
-
+import {Theme} from "../../../styles/Theme";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
     return (
@@ -25,8 +21,12 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 30px;
     align-items: center;
-  }
 
+    @media ${Theme.media.tablet} {
+      display: none;
+    }
+  }
+  
   li a {
     color: ${Theme.colors.fontDark};
     position: relative;
