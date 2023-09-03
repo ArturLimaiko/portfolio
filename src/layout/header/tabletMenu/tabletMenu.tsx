@@ -89,10 +89,10 @@ const TabletMenuPopup = styled.div<{ isOpen: boolean }>`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  width: 200px;
-  height: 200px;
-  top: -100px;
-  right: -100px;
+  width: 220px;
+  height: 125px;
+  top: 0px;
+  right: 0px;
   z-index: 3000;
 
   span {
@@ -101,8 +101,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     width: 36px;
     height: 2px;
     background-color: ${Theme.colors.fontDark};
-    left: -10px;
-    bottom: 42px;
+    left: 30px;
+    bottom: 60px;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
       background-color: rgba(255, 255, 255, 0);
