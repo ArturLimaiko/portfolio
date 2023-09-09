@@ -5,12 +5,12 @@ import {Theme} from "../../../styles/Theme";
 export const TabletMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledTabletMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span>
 
                 </span>
             </BurgerButton>
-            <TabletMenuPopup isOpen={true}>
+            <TabletMenuPopup isOpen={false}>
                 <ul>
                     {props.menuItems.map((item, index) => {
                         return <li key={index}>
@@ -89,10 +89,10 @@ const TabletMenuPopup = styled.div<{ isOpen: boolean }>`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  width: 220px;
+  width: 125px;
   height: 125px;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   z-index: 3000;
 
   span {

@@ -10,7 +10,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-around"} margin={"120px 15px"}>
+                <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"} margin={"120px 15px"}>
                     <div>
                         <Welcome>Hello👋,</Welcome>
                         <Name>My name is <br/>Artur Limaiko</Name>
