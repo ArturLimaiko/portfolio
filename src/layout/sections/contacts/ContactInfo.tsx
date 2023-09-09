@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
 import {Theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const ContactsInfo = () => {
     return (
@@ -56,21 +57,17 @@ const ContactInfo = styled.div`
   @media ${Theme.media.tablet} {
     align-items: center;
   }
-  
-  
+
+
   p {
-    font-size: 20px;
     line-height: 26px;
-    font-weight: bold;
+    ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 20, Fmin: 14})}
   }
 
   h4 {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: normal;
-    color: ${Theme.colors.fontDark}
+    color: ${Theme.colors.fontDark} ${font({family: '"Poppins", "sans-serif"', weight: 400, Fmax: 18, Fmin: 14})}
   }
 `
 
@@ -88,10 +85,10 @@ const ContactLink = styled.a`
   flex-direction: row;
   position: relative;
 
-  
+
   &:hover {
     color: #00c0fd;
-    
+
     &:hover svg {
       fill: #00c0fd;
       filter: drop-shadow(0 0px 12px #00c0fd);

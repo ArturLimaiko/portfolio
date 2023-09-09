@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
 import {Theme} from "../../../../styles/Theme";
+import {font} from "../../../../styles/Common";
 
 type SkillPropsType = {
     iconId: string
@@ -21,10 +22,8 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  background-color: ${Theme.colors.projectBg};
   border-radius: 3px;
-  padding: 15px;
-  border: 2px solid #000;
+  padding: 10px;
   
   &:hover {
     box-shadow: 8px 8px 0 0 #000;
@@ -36,5 +35,5 @@ const StyledSkill = styled.div`
 const SkillTitle = styled.h3`
   color: ${Theme.colors.fontDark};
   text-align: center;
-  font-size: 20px;
+  ${font({family: '"Poppins", "sans-serif"', weight: 100, Fmax: 20, Fmin: 14})}
 `

@@ -13,11 +13,11 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"} margin={"120px 15px"}>
-                    <div>
+                    <WelcomeWrapper>
                         <Welcome>Hello👋,</Welcome>
                         <Name>My name is <br/>Artur Limaiko</Name>
                         <MainTitle>A web developer</MainTitle>
-                    </div>
+                    </WelcomeWrapper>
                     <Frame>
                         <Photo src={photo} alt="photo developer"/>
                     </Frame>
@@ -47,6 +47,12 @@ const Frame = styled.div`
     top: -10px;
     right: -10px;
     z-index: -1;
+    
+    @media ${Theme.media.tablet} {
+      width: 340px;
+      height: 340px;
+    }
+    
     @media ${Theme.media.mobile} {
       width: 310px;
       height: 310px;
@@ -66,14 +72,21 @@ const Frame = styled.div`
     right: -133px;
     z-index: 3;
     @media ${Theme.media.tablet} {
-      bottom: -128px;
-      right: -127px;
+      //bottom: -128px;
+      //right: -127px;
+      display: none;
     }
 
     @media ${Theme.media.mobile} {
       display: none;
     }
+  }
+`
 
+const WelcomeWrapper = styled.div`
+  @media ${Theme.media.tablet} {
+    text-align: center;
+    display: inline-block;
   }
 `
 
@@ -82,6 +95,11 @@ const Photo = styled.img`
   height: 340px;
   object-fit: cover;
   border-radius: 50%;
+
+  @media ${Theme.media.tablet} {
+    width: 320px;
+    height: 320px;
+  }
 
   @media ${Theme.media.mobile} {
     width: 300px;

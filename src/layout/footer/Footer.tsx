@@ -15,12 +15,18 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
-                    <SocialList>
-                        <li><a href="#"><img src={instagram} width={"40"} height={"40"} alt="icon instagram"/></a></li>
-                        <li><a href="#"><img src={telegram} width={"40"} height={"40"} alt="icon telegram"/></a></li>
-                        <li><a href="#"><img src={linkedin} width={"40"} height={"40"} alt="icon linkedin"/></a></li>
-                    </SocialList>
-                    <Copyright>©2023 Designed and built by <Span>Limaiko A.A </Span></Copyright>
+                    <SocialWrapper>
+                        <SocialList>
+                            <li><a href="#"><img src={instagram} width={"40"} height={"40"} alt="icon instagram"/></a>
+                            </li>
+                            <li><a href="#"><img src={telegram} width={"40"} height={"40"} alt="icon telegram"/></a>
+                            </li>
+                            <li><a href="#"><img src={linkedin} width={"40"} height={"40"} alt="icon linkedin"/></a>
+                            </li>
+                        </SocialList>
+                        <Copyright>©2023 Designed and built by <Span>Limaiko A.A </Span></Copyright>
+
+                    </SocialWrapper>
 
                 </FlexWrapper>
             </Container>
@@ -29,9 +35,18 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+`
+
+const SocialWrapper = styled.div`
+  @media ${Theme.media.tablet} {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
 `
 
 const SocialList = styled.ul`
@@ -56,7 +71,7 @@ const Copyright = styled.small`
   color: ${Theme.colors.fontDark};
 `
 const Span = styled.span`
-  background: linear-gradient(270deg,rgba(231,15,170,1) 39%,rgba(0,192,253,1) 70%);
+  background: linear-gradient(270deg, rgba(231, 15, 170, 1) 39%, rgba(0, 192, 253, 1) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `

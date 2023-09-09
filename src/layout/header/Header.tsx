@@ -7,7 +7,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {TabletMenu} from "./tabletMenu/tabletMenu";
 
 
-const items = ["Home","About","Tech Stack","Project","Contact"]
+const items = ["Home", "About", "Tech Stack", "Project", "Contact"]
 
 export const Header = () => {
     return (
@@ -23,8 +23,8 @@ export const Header = () => {
     );
 };
 
-const StyledHeader = styled.header `
-position: fixed;
+const StyledHeader = styled.header`
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
