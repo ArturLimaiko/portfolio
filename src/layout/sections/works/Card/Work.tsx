@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import {Icon} from "../../../../components/icon/Icon";
 import {Button} from "../../../../components/Button";
+import {Theme} from "../../../../styles/Theme";
+import {font} from "../../../../styles/Common";
 
 type WorkPropsType = {
     title?: string
@@ -36,12 +38,16 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
   max-width: 375px;
-  width: 100%;
+
   height: 100%;
   min-height: 567px;
   background-color: #363636;
   border-radius: 20px;
   color: #cccccc;
+
+  @media ${Theme.media.mobile} {
+    width: 330px;
+  }
 `
 
 const WorkWrapper = styled.div`
@@ -95,20 +101,20 @@ const PreviewImage = styled.img`
 const WorkTitle = styled.h3`
   text-align: center;
   padding: 0 0 20px 0;
+  ${font({family: '"Poppins", "sans-serif"', weight: 400, Fmax: 28, Fmin: 20})}
+
 `
 
 const WorkDescription = styled.p`
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 300;
   padding: 0 0 20px 0;
+  ${font({family: '"Poppins", "sans-serif"', weight: 300, Fmax: 18, Fmin: 15})}
+
 `
 
 const WorkAbout = styled.span`
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 300;
+  ${font({family: '"Poppins", "sans-serif"', weight: 300, Fmax: 15, Fmin: 12})}
 `
+
 const WorkLinks = styled.div`
   padding: 20px 0 0 0;
   display: flex;

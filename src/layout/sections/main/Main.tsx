@@ -4,6 +4,8 @@ import photo from '../../../assets/images/photo.webp'
 import abstract from '../../../assets/images/abstract.png'
 import {FlexWrapper} from '../../../components/FlexWrapper'
 import {Container} from '../../../components/Container';
+import {Theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 
 export const Main = () => {
@@ -45,6 +47,12 @@ const Frame = styled.div`
     top: -10px;
     right: -10px;
     z-index: -1;
+    @media ${Theme.media.mobile} {
+      width: 310px;
+      height: 310px;
+      top: -5px;
+      right: -5px;
+    }
   }
 
   &::after {
@@ -52,11 +60,20 @@ const Frame = styled.div`
     position: absolute;
     display: inline-block;
     background-image: url(${abstract});
-    width: 621px;
-    height: 621px;
+    width: 628px;
+    height: 628px;
     bottom: -120px;
     right: -133px;
     z-index: 3;
+    @media ${Theme.media.tablet} {
+      bottom: -128px;
+      right: -127px;
+    }
+
+    @media ${Theme.media.mobile} {
+      display: none;
+    }
+
   }
 `
 
@@ -65,26 +82,32 @@ const Photo = styled.img`
   height: 340px;
   object-fit: cover;
   border-radius: 50%;
+
+  @media ${Theme.media.mobile} {
+    width: 300px;
+    height: 300px;
+  }
 `
 
 
 const MainTitle = styled.h1`
   color: #D9D9D9;
-
+  ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 58, Fmin: 30})}
 `
 
 const Name = styled.h2`
+  ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 50, Fmin: 36})}
   background: linear-gradient(270deg, rgba(231, 15, 170, 1) 39%, rgba(0, 192, 253, 1) 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 10px 0;
+
+  @media ${Theme.media.mobile} {
+    margin: 15px 0;
+  }
 `
 
 const Welcome = styled.span`
   color: #D9D9D9;
-  font-weight: bold;
-  font-family: "Poppins", "sans-serif";
-  font-size: 58px;
-  line-height: 70px;
-  letter-spacing: -1px;
+  ${font({family: '"Poppins", "sans-serif"', weight: 700, letterSpacing: -1, Fmax: 58, Fmin: 36})}
 `

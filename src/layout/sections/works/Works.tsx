@@ -9,8 +9,8 @@ import threeImg from "../../../assets/images/Three.jpg"
 import fourthImg from "../../../assets/images/Fourth.jpg"
 import fiveImg from "../../../assets/images/Five.jpg"
 import sixImg from "../../../assets/images/Six.jpg"
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
+import {Theme} from "../../../styles/Theme";
 
 export const Works = () => {
     return (
@@ -19,7 +19,7 @@ export const Works = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
-                <FlexWrapper justify={"space-between"} gap={"30px"} wrap={"wrap"}>
+                <WorkWrapper>
                     <Work title={"Project one"}
                           text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                           about={"Tech stack : HTML , JavaScript, SASS, React"} src={oneImg}/>
@@ -38,7 +38,7 @@ export const Works = () => {
                     <Work title={"Project six"}
                           text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                           about={"Tech stack : HTML , JavaScript, SASS, React"} src={sixImg}/>
-                </FlexWrapper>
+                </WorkWrapper>
             </Container>
         </StyledWorks>
 
@@ -49,3 +49,12 @@ const StyledWorks = styled.section`
   background-color: #191919;
   min-height: 100vh;
 `
+
+const WorkWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 15px;
+`
+
