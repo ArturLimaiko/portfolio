@@ -38,16 +38,13 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
   max-width: 375px;
-
+  width: 320px;
   height: 100%;
   min-height: 567px;
   background-color: #363636;
   border-radius: 20px;
   color: #cccccc;
-
-  @media ${Theme.media.mobile} {
-    width: 330px;
-  }
+  flex-grow: 1;
 `
 
 const WorkWrapper = styled.div`

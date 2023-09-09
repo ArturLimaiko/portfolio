@@ -52,6 +52,10 @@ const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media ${Theme.media.tablet} {
+    align-items: center;
+  }
   
   
   p {

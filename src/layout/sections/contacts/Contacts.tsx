@@ -62,6 +62,11 @@ const FormContainer = styled.div`
   justify-items: center;
   margin: 0 auto;
   gap: 50px;
+
+  @media ${Theme.media.tablet} {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
 `
 
 const Field = styled.input.attrs(({type, placeholder}) => ({

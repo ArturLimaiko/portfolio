@@ -24,6 +24,15 @@ export const GlobalStyle = createGlobalStyle`
 
   section {
     padding: 100px 0;
+
+    @media ${Theme.media.tablet} {
+      padding: 50px 0;
+    }
+
+    @media ${Theme.media.mobile} {
+      padding: 25px 0;
+    }
+    
   }
 
   a {

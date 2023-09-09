@@ -10,7 +10,6 @@ import fourthImg from "../../../assets/images/Fourth.jpg"
 import fiveImg from "../../../assets/images/Five.jpg"
 import sixImg from "../../../assets/images/Six.jpg"
 import {Container} from "../../../components/Container";
-import {Theme} from "../../../styles/Theme";
 
 export const Works = () => {
     return (
