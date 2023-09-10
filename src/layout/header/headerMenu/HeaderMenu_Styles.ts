@@ -1,31 +1,50 @@
-import React from 'react';
-import styled, {css} from 'styled-components';
+import styled, {css} from "styled-components";
 import {Theme} from "../../../styles/Theme";
-import {Menu} from "../menu/Menu";
 
-export const TabletMenu:React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
-    return (
-        <StyledTabletMenu>
-            <BurgerButton isOpen={false}>
-                <span>
 
-                </span>
-            </BurgerButton>
-            <TabletMenuPopup isOpen={false}>
-                <Menu menuItems={props.menuItems}/>
-            </TabletMenuPopup>
 
-        </StyledTabletMenu>
-    );
-};
 
-const StyledTabletMenu = styled.nav`
-  display: none;
+//Menu
 
-  @media ${Theme.media.tablet} {
+const MenuItem = styled.li`
+`
+
+const LinkItem = styled.a`
+  color: ${Theme.colors.fontDark};
+  position: relative;
+  text-decoration: none;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+
+  &:hover {
+    color: #00c0fd;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
     display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(270deg, rgba(231, 15, 170, 1) 35%, rgba(0, 192, 253, 1) 65%);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
   }
 }
+`
+
+
+// MobileMenu
+
+const TabletMenu = styled.nav`
 `
 
 const TabletMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -130,7 +149,24 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         width: 36px;
       `}
     }
-
-
   }
 `
+
+//Desktop Menu
+
+const DesktopMenu = styled.nav`
+  ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+`
+
+export const S = {
+    MenuItem,
+    LinkItem,
+    TabletMenu,
+    TabletMenuPopup,
+    BurgerButton,
+    DesktopMenu
+}
