@@ -1,33 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
 import {Container} from '../../components/Container';
 import {Logo} from "../../components/logo/Logo";
-import {Menu} from "./menu/Menu";
+import {DesktopMenu} from "./desktopMenu/DesktopMenu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {TabletMenu} from "./tabletMenu/tabletMenu";
-
+import {S} from "./Header_Styles"
 
 const items = ["Home", "About", "Tech Stack", "Project", "Contact"]
 
-export const Header = () => {
+export const Header: React.FC= () => {
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
-                    <Menu menuItems={items}/>
+                    <DesktopMenu menuItems={items}/>
                     <TabletMenu menuItems={items}/>
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  min-width: 360px;
-`

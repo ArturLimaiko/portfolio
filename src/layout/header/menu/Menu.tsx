@@ -1,47 +1,36 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from "styled-components";
 import {Theme} from "../../../styles/Theme";
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+export const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
     return (
-        <StyledMenu>
-            <ul>
-                {props.menuItems.map((item, index) => {
-                    return <li key={index}>
-                        <a href="#">{item}</a>
-                    </li>
-                })}
-            </ul>
-        </StyledMenu>
+        <ul>
+            {props.menuItems.map((item, index) => {
+                return <ListItem key={index}>
+                    <LinkItem href="#">{item}</LinkItem>
+                </ListItem>
+            })}
+        </ul>
     );
 };
 
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+const ListItem = styled.li`
+`
 
-    @media ${Theme.media.tablet} {
-      display: none;
-    }
-  }
-  
-  li a {
-    color: ${Theme.colors.fontDark};
-    position: relative;
-    text-decoration: none;
-    font-family: "DM Sans", "sans-serif";
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
-  }
+const LinkItem = styled.a`
+  color: ${Theme.colors.fontDark};
+  position: relative;
+  text-decoration: none;
+  font-family: "DM Sans", "sans-serif";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
 
-  a:hover {
+  &:hover {
     color: #00c0fd;
   }
 
-  a::before {
+  &::before {
     content: "";
     position: absolute;
     display: block;
@@ -54,7 +43,8 @@ const StyledMenu = styled.nav`
     transition: transform 0.5s ease;
   }
 
-  a:hover::before {
+  &:hover::before {
     transform: scaleX(1);
   }
+}
 `

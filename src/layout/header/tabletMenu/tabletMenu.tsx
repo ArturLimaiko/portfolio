@@ -1,8 +1,9 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import {Theme} from "../../../styles/Theme";
+import {Menu} from "../menu/Menu";
 
-export const TabletMenu = (props: { menuItems: Array<string> }) => {
+export const TabletMenu:React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
     return (
         <StyledTabletMenu>
             <BurgerButton isOpen={false}>
@@ -11,13 +12,7 @@ export const TabletMenu = (props: { menuItems: Array<string> }) => {
                 </span>
             </BurgerButton>
             <TabletMenuPopup isOpen={false}>
-                <ul>
-                    {props.menuItems.map((item, index) => {
-                        return <li key={index}>
-                            <a href="#">{item}</a>
-                        </li>
-                    })}
-                </ul>
+                <Menu menuItems={props.menuItems}/>
             </TabletMenuPopup>
 
         </StyledTabletMenu>
