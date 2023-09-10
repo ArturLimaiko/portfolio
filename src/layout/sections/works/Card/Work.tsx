@@ -101,9 +101,25 @@ const ImageWrapper = styled.div`
     ${Button} {
       opacity: 1;
       font-weight: normal;
-      font-size: 14px;
-      line-height: 26px;
-      letter-spacing: 3px;
+      font-size: 10px;
+      line-height: 22px;
+      letter-spacing: 2px;
+      transition-duration: .2s;
+      transition-timing-function: cubic-bezier(.4, 0, 1, 1);
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    ${Button} {
+      opacity: 1;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 22px;
+      letter-spacing: 2px;
       transition-duration: .2s;
       transition-timing-function: cubic-bezier(.4, 0, 1, 1);
     }

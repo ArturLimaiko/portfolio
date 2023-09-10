@@ -45,6 +45,10 @@ export const ContactsInfo = () => {
 const Img = styled.img`
   width: 350px;
   height: 300px;
+
+  @media ${Theme.media.mobile} {
+    width: 330px;
+  }
 `
 
 const ContactInfo = styled.div`
@@ -86,6 +90,7 @@ const ContactLink = styled.a`
   position: relative;
 
 
+
   &:hover {
     color: #00c0fd;
 
@@ -98,5 +103,15 @@ const ContactLink = styled.a`
   svg {
     margin-right: 30px;
     filter: drop-shadow(0 0px 12px #363636);
+    
+    @media ${Theme.media.tablet} {
+      width: 60px;
+      height:60px;
+    }
+    
+    @media ${Theme.media.mobile} {
+      width: 40px;
+      height:40px;
+    }
   }
 `

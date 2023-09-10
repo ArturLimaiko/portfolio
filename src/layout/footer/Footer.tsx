@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo";
-import {FlexWrapper} from "../../components/FlexWrapper";
 import instagram from '../../assets/images/instagram.svg'
 import telegram from '../../assets/images/telegram.svg'
 import linkedin from '../../assets/images/linkedin.svg'
@@ -13,8 +11,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper justify={"space-between"} align={"center"}>
-                    <Logo/>
+                <FooterWrapper>
                     <SocialWrapper>
                         <SocialList>
                             <li><a href="#"><img src={instagram} width={"40"} height={"40"} alt="icon instagram"/></a>
@@ -25,27 +22,37 @@ export const Footer = () => {
                             </li>
                         </SocialList>
                         <Copyright>©2023 Designed and built by <Span>Limaiko A.A </Span></Copyright>
-
                     </SocialWrapper>
-
-                </FlexWrapper>
+                </FooterWrapper>
             </Container>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+`
+
+const FooterWrapper = styled.div `
+
 `
 
 const SocialWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0;
+  
   @media ${Theme.media.tablet} {
-    display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    margin: 30px 15px;
+  }
+
+  @media ${Theme.media.mobile} {
+    margin: 40px 15px;
+    justify-content: space-between;
+    gap: 30px;
   }
 `
 

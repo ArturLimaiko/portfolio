@@ -47,25 +47,26 @@ const StyledContacts = styled.section`
 
 const StyledForm = styled.form`
   max-width: 500px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 0 auto;
+
+  @media ${Theme.media.mobile} {
+    margin: 0 15px;
+  }
 `
 
 const FormContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 1100px;
-  width: 100%;
   justify-items: center;
-  margin: 0 auto;
+  margin: 0 15px;
   gap: 50px;
 
   @media ${Theme.media.tablet} {
     grid-template-columns: 1fr;
     align-items: center;
+    margin: 0 15px;
   }
 `
 
@@ -155,4 +156,8 @@ const WrapperInput = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+  
+  @media ${Theme.media.tablet} {
+    flex-direction: column;
+}
 `
