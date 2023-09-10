@@ -37,7 +37,6 @@ export const Work = (props: WorkPropsType) => {
 };
 
 const StyledWork = styled.div`
-  max-width: 375px;
   width: 320px;
   height: 100%;
   min-height: 567px;
@@ -45,6 +44,10 @@ const StyledWork = styled.div`
   border-radius: 20px;
   color: #cccccc;
   flex-grow: 1;
+
+  @media ${Theme.media.desktop} {
+    max-width: 375px;
+  }
 `
 
 const WorkWrapper = styled.div`
@@ -54,17 +57,29 @@ const WorkWrapper = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
 
-  &:hover {
+  ${Button} {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 7px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+  }
+
+  &:hover {
     &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 7px;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
+      opacity: 1;
     }
 
     ${Button} {
@@ -78,13 +93,20 @@ const ImageWrapper = styled.div`
     }
   }
 
+  @media ${Theme.media.tablet} {
+    &::before {
+      opacity: 1;
+    }
 
-  ${Button} {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    ${Button} {
+      opacity: 1;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: 3px;
+      transition-duration: .2s;
+      transition-timing-function: cubic-bezier(.4, 0, 1, 1);
+    }
   }
 `
 
