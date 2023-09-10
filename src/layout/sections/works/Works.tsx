@@ -46,7 +46,6 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
   background-color: #191919;
-  min-height: 100vh;
 `
 
 const WorkWrapper = styled.div`
