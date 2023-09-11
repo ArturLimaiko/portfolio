@@ -1,9 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import {Icon} from "../../../../components/icon/Icon";
 import {Button} from "../../../../components/Button";
-import {Theme} from "../../../../styles/Theme";
-import {font} from "../../../../styles/Common";
+import {S} from "../Works_Styles";
 
 type WorkPropsType = {
     title?: string
@@ -12,155 +10,27 @@ type WorkPropsType = {
     src?: string
 }
 
-export const Work = (props: WorkPropsType) => {
+export const Work:React.FC<WorkPropsType> = (props: WorkPropsType) => {
     return (
-        <StyledWork>
-            <ImageWrapper>
-                <PreviewImage src={props.src} alt=""/>
+        <S.Work>
+            <S.ImageWrapper>
+                <S.PreviewImage src={props.src} alt=""/>
                 <Button>View Project</Button>
-            </ImageWrapper>
-            <WorkWrapper>
-                <WorkTitle>{props.title}</WorkTitle>
-                <WorkDescription>{props.text}</WorkDescription>
-                <WorkAbout>{props.about}</WorkAbout>
-                <WorkLinks>
-                    <WorkLink href={"#"}>
+            </S.ImageWrapper>
+            <S.WorkWrapper>
+                <S.WorkTitle>{props.title}</S.WorkTitle>
+                <S.WorkDescription>{props.text}</S.WorkDescription>
+                <S.WorkAbout>{props.about}</S.WorkAbout>
+                <S.WorkLinks>
+                    <S.WorkLink href={"#"}>
                         <Icon iconId={"link-chain"} viewBox={"0 0 20 20"} width={"20px"} height={"20px"}/>
-                        Live Preview</WorkLink>
-                    <WorkLink href={"#"}>
+                        Live Preview</S.WorkLink>
+                    <S.WorkLink href={"#"}>
                         <Icon iconId={"link-github"} viewBox={"0 0 20 20"} width={"20px"} height={"20px"}/>
-                        View Code</WorkLink>
-                </WorkLinks>
-            </WorkWrapper>
-        </StyledWork>
+                        View Code</S.WorkLink>
+                </S.WorkLinks>
+            </S.WorkWrapper>
+        </S.Work>
     );
 };
 
-const StyledWork = styled.div`
-  width: 320px;
-  height: 100%;
-  min-height: 567px;
-  background-color: #363636;
-  border-radius: 20px;
-  color: #cccccc;
-  flex-grow: 1;
-
-  @media ${Theme.media.desktop} {
-    max-width: 375px;
-  }
-`
-
-const WorkWrapper = styled.div`
-  padding: 27px;
-`
-
-const ImageWrapper = styled.div`
-  position: relative;
-
-  ${Button} {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 7px;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-    opacity: 0;
-  }
-
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
-
-    ${Button} {
-      opacity: 1;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 26px;
-      letter-spacing: 3px;
-      transition-duration: .2s;
-      transition-timing-function: cubic-bezier(.4, 0, 1, 1);
-    }
-  }
-
-  @media ${Theme.media.tablet} {
-    &::before {
-      opacity: 1;
-    }
-
-    ${Button} {
-      opacity: 1;
-      font-weight: normal;
-      font-size: 10px;
-      line-height: 22px;
-      letter-spacing: 2px;
-      transition-duration: .2s;
-      transition-timing-function: cubic-bezier(.4, 0, 1, 1);
-    }
-  }
-
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
-
-    ${Button} {
-      opacity: 1;
-      font-weight: normal;
-      font-size: 10px;
-      line-height: 22px;
-      letter-spacing: 2px;
-      transition-duration: .2s;
-      transition-timing-function: cubic-bezier(.4, 0, 1, 1);
-    }
-  }
-`
-
-const PreviewImage = styled.img`
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
-`
-
-const WorkTitle = styled.h3`
-  text-align: center;
-  padding: 0 0 20px 0;
-  ${font({family: '"Poppins", "sans-serif"', weight: 400, Fmax: 28, Fmin: 20})}
-
-`
-
-const WorkDescription = styled.p`
-  padding: 0 0 20px 0;
-  ${font({family: '"Poppins", "sans-serif"', weight: 300, Fmax: 18, Fmin: 15})}
-
-`
-
-const WorkAbout = styled.span`
-  ${font({family: '"Poppins", "sans-serif"', weight: 300, Fmax: 15, Fmin: 12})}
-`
-
-const WorkLinks = styled.div`
-  padding: 20px 0 0 0;
-  display: flex;
-  gap: 20px;
-`
-
-const WorkLink = styled.a`
-  color: #ffffff;
-  text-decoration: underline;
-
-  & svg {
-    margin: 0 10px 0 0;
-  }
-`
