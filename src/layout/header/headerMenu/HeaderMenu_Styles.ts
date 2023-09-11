@@ -1,9 +1,6 @@
 import styled, {css} from "styled-components";
 import {Theme} from "../../../styles/Theme";
 
-
-
-
 //Menu
 
 const MenuItem = styled.li`
