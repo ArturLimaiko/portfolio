@@ -38,10 +38,12 @@ const SocialList = styled.ul`
   a:hover {
     filter: drop-shadow(0px 10px 42px #fff);
   }
+`
 
-  li a::before {
-    content: none;
-  }
+const SocialItem = styled.li `
+  & a::before {
+  content: none;
+}
 `
 
 const Copyright = styled.small`
@@ -63,6 +65,7 @@ export const S = {
     FooterWrapper,
     SocialWrapper,
     SocialList,
+    SocialItem,
     Copyright,
     Span,
 }

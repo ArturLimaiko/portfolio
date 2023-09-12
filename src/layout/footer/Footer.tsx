@@ -5,19 +5,36 @@ import linkedin from '../../assets/images/linkedin.svg'
 import {Container} from "../../components/Container";
 import {S} from "./Footer_Styled";
 
-export const Footer:React.FC = () => {
+
+const SocialItemData = [
+    {
+        src: instagram,
+    },
+    {
+        src: telegram,
+    },
+    {
+        src: linkedin,
+    }
+]
+
+export const Footer: React.FC = () => {
     return (
         <S.Footer>
             <Container>
                 <S.FooterWrapper>
                     <S.SocialWrapper>
                         <S.SocialList>
-                            <li><a href="#"><img src={instagram} width={"40"} height={"40"} alt="icon instagram"/></a>
-                            </li>
-                            <li><a href="#"><img src={telegram} width={"40"} height={"40"} alt="icon telegram"/></a>
-                            </li>
-                            <li><a href="#"><img src={linkedin} width={"40"} height={"40"} alt="icon linkedin"/></a>
-                            </li>
+                            {SocialItemData.map((socialItem, index) => {
+                                return (
+                                    <S.SocialItem key={index}>
+                                        <a href="#">
+                                            <img src={socialItem.src} width={"40"} height={"40"}
+                                                 alt="icon instagram"/>
+                                        </a>
+                                    </S.SocialItem>
+                                )
+                            })}
                         </S.SocialList>
                         <S.Copyright>©2023 Designed and built by <S.Span>Limaiko A.A </S.Span></S.Copyright>
                     </S.SocialWrapper>
