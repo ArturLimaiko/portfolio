@@ -5,7 +5,7 @@ import {Icon} from "../icon/Icon";
 export const Logo: React.FC = () => {
     return (
         <StyledIcon>
-            <a href="">
+            <a href="#" aria-label="логотип портфолио">
                 <Icon iconId={'logo'} fill={"#000000"}/>
             </a>
         </StyledIcon>

@@ -9,12 +9,21 @@ import {S} from "./Footer_Styled";
 const SocialItemData = [
     {
         src: instagram,
+        width: "40px",
+        height: "40px",
+        alt:"icon instagram"
     },
     {
         src: telegram,
+        width: "40px",
+        height: "40px",
+        alt:"icon telegram"
     },
     {
         src: linkedin,
+        width: "40px",
+        height: "40px",
+        alt:"icon linkedin"
     }
 ]
 
@@ -28,9 +37,9 @@ export const Footer: React.FC = () => {
                             {SocialItemData.map((socialItem, index) => {
                                 return (
                                     <S.SocialItem key={index}>
-                                        <a href="#">
-                                            <img src={socialItem.src} width={"40"} height={"40"}
-                                                 alt="icon instagram"/>
+                                        <a href="#" aria-label="иконка">
+                                            <img src={socialItem.src} width={socialItem.width} height={socialItem.height}
+                                                 alt={socialItem.alt}/>
                                         </a>
                                     </S.SocialItem>
                                 )

@@ -15,15 +15,15 @@ export const Contact: React.FC = () => {
                 <S.FormContainer>
                     <S.Form>
                         <S.WrapperInput>
-                            <S.Label> First name
-                                <S.Field placeholder={"Name"} aria-placeholder={"Name"}/>
+                            <S.Label aria-describedby="1"> First name
+                                <S.Field id="1" placeholder={"Name"} aria-placeholder={"Name"}/>
                             </S.Label>
-                            <S.Label> Your email
-                                <S.Field placeholder={"Email"} type={"email"} aria-placeholder={"Email"}/>
+                            <S.Label aria-describedby="2"> Your email
+                                <S.Field id="2" placeholder={"Email"} type={"email"} aria-placeholder={"Email"}/>
                             </S.Label>
                         </S.WrapperInput>
-                        <S.Label> Subject
-                            <S.Field placeholder={"Subject"} aria-placeholder={"Subject"}/>
+                        <S.Label aria-describedby="3"> Subject
+                            <S.Field id="3" placeholder={"Subject"} aria-placeholder={"Subject"}/>
                         </S.Label>
                         <S.FieldTextArea as={"textarea"} placeholder={"Your message"}
                                          aria-placeholder={"Your message"}/>

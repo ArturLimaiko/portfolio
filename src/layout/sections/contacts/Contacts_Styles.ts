@@ -31,7 +31,7 @@ const ContactInfo = styled.div`
     ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 20, Fmin: 14})}
   }
 
-  h4 {
+  h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: ${Theme.colors.fontDark} ${font({family: '"Poppins", "sans-serif"', weight: 400, Fmax: 18, Fmin: 14})}
