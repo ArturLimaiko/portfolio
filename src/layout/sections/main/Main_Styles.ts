@@ -23,12 +23,12 @@ const Frame = styled.div`
     top: -10px;
     right: -10px;
     z-index: -1;
-    
+
     @media ${Theme.media.tablet} {
       width: 340px;
       height: 340px;
     }
-    
+
     @media ${Theme.media.mobile} {
       width: 310px;
       height: 310px;
@@ -85,7 +85,11 @@ const Photo = styled.img`
 
 const MainTitle = styled.h1`
   color: #D9D9D9;
+
   ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 58, Fmin: 30})}
+  p {
+    display: none;
+  }
 `
 
 const Name = styled.h2`

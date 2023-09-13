@@ -7,6 +7,7 @@ const Header = styled.header`
   right: 0;
   z-index: 100;
   min-width: 360px;
+  background-color: rgba(25, 25 ,25 , 0.8);
 `
 
 export const S = {

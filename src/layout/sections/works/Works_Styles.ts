@@ -100,7 +100,7 @@ const ImageWrapper = styled.div`
       font-size: 10px;
       line-height: 22px;
       letter-spacing: 2px;
-      transition-duration: .2s;
+      transition-duration: .3s;
       transition-timing-function: cubic-bezier(.4, 0, 1, 1);
     }
   }

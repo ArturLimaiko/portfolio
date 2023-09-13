@@ -5,11 +5,13 @@ import {Skills} from "./layout/sections/skills/Skills";
 import {Works} from "./layout/sections/works/Works";
 import {Contact} from "./layout/sections/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
+import {Particle} from "./components/particle/Particle";
 
 
 function App() {
     return (
         <div className="App">
+            <Particle/>
             <Header/>
             <Main/>
             <Skills/>
