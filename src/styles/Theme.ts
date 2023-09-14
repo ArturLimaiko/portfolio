@@ -8,10 +8,13 @@ export const Theme = {
         fontLight: "#ffffff",
         fontDark: "#a7a7a7"
     },
-
     media: {
         tablet: "screen and (max-width: 768px)",
         mobile: "screen and (max-width: 360px)",
         desktop: "screen and (min-width: 1140px)",
+    },
+
+    animations: {
+        transition: ".3s ease-in-out"
     }
 }

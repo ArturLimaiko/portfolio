@@ -3,7 +3,7 @@ import {Theme} from "../../../styles/Theme";
 import abstract from "../../../assets/images/abstract.png";
 import {font} from "../../../styles/Common";
 
-const StyledMain = styled.div`
+const Main = styled.div`
   background-color: #191919;
   display: flex;
   margin-top: 250px;
@@ -133,7 +133,7 @@ const Welcome = styled.span`
 `
 
 export const S = {
-    StyledMain,
+    Main,
     MainWrapper,
     Frame,
     WelcomeWrapper,

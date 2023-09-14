@@ -7,7 +7,7 @@ import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
-        <S.StyledMain>
+        <S.Main id={"about"}>
             <Container>
                 <S.MainWrapper>
                     <S.WelcomeWrapper>
@@ -32,6 +32,6 @@ export const Main: React.FC = () => {
                     </Tilt>
                 </S.MainWrapper>
             </Container>
-        </S.StyledMain>
+        </S.Main>
     );
 };

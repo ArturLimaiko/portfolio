@@ -6,9 +6,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {S} from "./Header_Styles"
 import {TabletMenu} from "./headerMenu/tabletMenu/tabletMenu";
 
-const items = ["Home", "About", "Tech Stack", "Project", "Contact"]
-
-export const Header: React.FC= () => {
+export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 768;
@@ -26,8 +24,8 @@ export const Header: React.FC= () => {
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
 
-                    {width < breakpoint ? <TabletMenu menuItems={items}/>
-                                        : <DesktopMenu menuItems={items}/>}
+                    {width < breakpoint ? <TabletMenu/>
+                                        : <DesktopMenu/>}
                 </FlexWrapper>
             </Container>
         </S.Header>

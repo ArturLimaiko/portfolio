@@ -43,7 +43,8 @@ const ImageWrapper = styled.div`
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
+    transition: ${Theme.animations.transition};
   }
 
   &::before {
@@ -56,6 +57,7 @@ const ImageWrapper = styled.div`
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
     opacity: 0;
+    transition: ${Theme.animations.transition};
   }
 
   &:hover {
@@ -71,6 +73,7 @@ const ImageWrapper = styled.div`
       letter-spacing: 3px;
       transition-duration: .2s;
       transition-timing-function: cubic-bezier(.4, 0, 1, 1);
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -139,10 +142,19 @@ const WorkLinks = styled.div`
 
 const WorkLink = styled.a`
   color: #ffffff;
-  text-decoration: underline;
 
   & svg {
     margin: 0 10px 0 0;
+  }
+
+  &:hover {
+    background: linear-gradient(270deg,rgba(231,15,170,1) 35%,rgba(0,192,253,1) 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;;
+  }
+  
+  &:hover svg {
+    opacity: 0.6;
   }
 `
 

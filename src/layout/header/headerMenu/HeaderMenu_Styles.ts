@@ -1,12 +1,13 @@
 import styled, {css} from "styled-components";
 import {Theme} from "../../../styles/Theme";
+import {Link} from "react-scroll";
 
 //Menu
 
 const MenuItem = styled.li`
 `
 
-const LinkItem = styled.a`
+const NavLink = styled(Link)`
   color: ${Theme.colors.fontDark};
   position: relative;
   text-decoration: none;
@@ -15,27 +16,28 @@ const LinkItem = styled.a`
   font-size: 20px;
   line-height: 26px;
 
-  &:hover {
-    color: #00c0fd;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
+  &:hover , &.active {
     background: linear-gradient(270deg, rgba(231, 15, 170, 1) 35%, rgba(0, 192, 253, 1) 65%);
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    &::before {
+      transform: scaleX(1);
+      transition: ${Theme.animations.transition};
+    }
   }
-
-  &:hover::before {
-    transform: scaleX(1);
-  }
-}
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(270deg, rgba(231, 15, 170, 1) 35%, rgba(0, 192, 253, 1) 65%);
+      transform: scaleX(0);
+      transition: transform ${Theme.animations.transition};
+    }
 `
 
 
@@ -162,7 +164,7 @@ const DesktopMenu = styled.nav`
 
 export const S = {
     MenuItem,
-    LinkItem,
+    NavLink,
     TabletMenu,
     TabletMenuPopup,
     BurgerButton,
