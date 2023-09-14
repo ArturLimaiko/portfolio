@@ -4,6 +4,7 @@ import {Theme} from "../../styles/Theme";
 
 
 const Footer = styled.footer`
+  position: relative;
 `
 
 const FooterWrapper = styled.div `

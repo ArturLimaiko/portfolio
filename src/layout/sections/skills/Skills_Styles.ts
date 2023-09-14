@@ -4,6 +4,7 @@ import {font} from "../../../styles/Common";
 
 
 const Skills = styled.section`
+  position: relative;
 `
 
 const Skill = styled.div`

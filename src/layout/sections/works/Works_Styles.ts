@@ -6,6 +6,7 @@ import {font} from "../../../styles/Common";
 
 const Works = styled.section`
   background-color: #191919;
+  position: relative;
 `
 
 const WorksWrapper = styled.div`

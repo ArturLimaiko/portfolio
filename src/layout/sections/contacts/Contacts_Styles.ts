@@ -53,7 +53,6 @@ const ContactLink = styled.a`
   position: relative;
 
 
-
   &:hover {
     color: #00c0fd;
 
@@ -66,15 +65,15 @@ const ContactLink = styled.a`
   svg {
     margin-right: 30px;
     filter: drop-shadow(0 0px 12px #363636);
-    
+
     @media ${Theme.media.tablet} {
       width: 60px;
-      height:60px;
+      height: 60px;
     }
-    
+
     @media ${Theme.media.mobile} {
       width: 40px;
-      height:40px;
+      height: 40px;
     }
   }
 `
@@ -83,6 +82,8 @@ const ContactLink = styled.a`
 // Contacts
 
 const Contacts = styled.section`
+  position: relative;
+
   ul {
     display: flex;
     flex-direction: column;
@@ -201,10 +202,10 @@ const WrapperInput = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
-  
+
   @media ${Theme.media.tablet} {
     flex-direction: column;
-}
+  }
 `
 
 

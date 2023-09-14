@@ -7,6 +7,7 @@ const StyledMain = styled.div`
   background-color: #191919;
   display: flex;
   margin-top: 250px;
+  position: relative;
 `
 
 const Frame = styled.div`
