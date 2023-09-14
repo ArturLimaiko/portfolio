@@ -136,8 +136,10 @@ const WorkAbout = styled.span`
 
 const WorkLinks = styled.div`
   padding: 20px 0 0 0;
-  display: flex;
+  display: grid;
   gap: 20px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
 `
 
 const WorkLink = styled.a`
@@ -148,14 +150,21 @@ const WorkLink = styled.a`
   }
 
   &:hover {
-    background: linear-gradient(270deg,rgba(231,15,170,1) 35%,rgba(0,192,253,1) 65%);
+    background: linear-gradient(270deg, rgba(231, 15, 170, 1) 35%, rgba(0, 192, 253, 1) 65%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;;
   }
-  
+
   &:hover svg {
     opacity: 0.6;
   }
+
+  @media ${Theme.media.tablet} {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
 `
 
 

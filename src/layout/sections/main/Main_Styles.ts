@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {Theme} from "../../../styles/Theme";
-import abstract from "../../../assets/images/abstract.png";
 import {font} from "../../../styles/Common";
 
 const Main = styled.div`
@@ -12,25 +11,26 @@ const Main = styled.div`
 
 const MainWrapper = styled.div`
   margin: 120px 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap:50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap:20px;
 
   @media ${Theme.media.tablet} {
     justify-content: center;
+    grid-template-columns: 1fr;
   }
 `
 
 const Frame = styled.div`
+  justify-self: center;
   position: relative;
   z-index: 0;
 
   &::before {
     content: "";
     position: absolute;
-    width: 360px;
-    height: 360px;
+    width: 410px;
+    height: 410px;
     background: linear-gradient(180deg, rgba(231, 15, 170, 1) 30%, rgba(0, 192, 253, 1) 70%);
     border-radius: 50%;
     top: -10px;
@@ -38,8 +38,8 @@ const Frame = styled.div`
     z-index: -1;
 
     @media ${Theme.media.tablet} {
-      width: 340px;
-      height: 340px;
+      width: 370px;
+      height: 370px;
     }
 
     @media ${Theme.media.mobile} {
@@ -47,27 +47,6 @@ const Frame = styled.div`
       height: 310px;
       top: -5px;
       right: -5px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    background-image: url(${abstract});
-    width: 628px;
-    height: 628px;
-    bottom: -120px;
-    right: -133px;
-    z-index: 3;
-    @media ${Theme.media.tablet} {
-      //bottom: -128px;
-      //right: -127px;
-      display: none;
-    }
-
-    @media ${Theme.media.mobile} {
-      display: none;
     }
   }
 `
@@ -80,14 +59,14 @@ const WelcomeWrapper = styled.div`
 `
 
 const Photo = styled.img`
-  width: 340px;
-  height: 340px;
+  width: 390px;
+  height: 390px;
   object-fit: cover;
   border-radius: 50%;
 
   @media ${Theme.media.tablet} {
-    width: 320px;
-    height: 320px;
+    width: 350px;
+    height: 350px;
   }
 
   @media ${Theme.media.mobile} {
@@ -99,7 +78,7 @@ const Photo = styled.img`
 const MainTitle = styled.h1`
   color: #D9D9D9;
 
-  ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 58, Fmin: 30})}
+  ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 47, Fmin: 23})}
   
   p {
     display: none;
@@ -117,7 +96,7 @@ const MainTitle = styled.h1`
 
 const Name = styled.h2`
   ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 50, Fmin: 36})}
-  background: linear-gradient(270deg, rgba(231, 15, 170, 1) 39%, rgba(0, 192, 253, 1) 70%);
+  background: linear-gradient(270deg, rgba(231, 15, 170, 1) 50%, rgba(0, 192, 253, 1) 85%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 10px 0;

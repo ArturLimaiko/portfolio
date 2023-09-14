@@ -25,11 +25,9 @@ export const Main: React.FC = () => {
                             />
                         </S.MainTitle>
                     </S.WelcomeWrapper>
-                    <Tilt>
                         <S.Frame>
                             <S.Photo src={photo} alt="photo developer"/>
                         </S.Frame>
-                    </Tilt>
                 </S.MainWrapper>
             </Container>
         </S.Main>
