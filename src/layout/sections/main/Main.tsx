@@ -1,6 +1,5 @@
 import React from 'react';
-import photo from '../../../assets/images/photo.webp'
-import {FlexWrapper} from '../../../components/FlexWrapper'
+import photo from '../../../assets/images/photo.webp';
 import {Container} from '../../../components/Container';
 import {S} from "./Main_Styles";
 import Typewriter from 'typewriter-effect';
@@ -10,7 +9,7 @@ export const Main: React.FC = () => {
     return (
         <S.StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"} margin={"120px 15px"}>
+                <S.MainWrapper>
                     <S.WelcomeWrapper>
                         <S.Welcome>Hello👋,</S.Welcome>
                         <S.Name>My name is <br/>Artur Limaiko</S.Name>
@@ -31,8 +30,7 @@ export const Main: React.FC = () => {
                             <S.Photo src={photo} alt="photo developer"/>
                         </S.Frame>
                     </Tilt>
-
-                </FlexWrapper>
+                </S.MainWrapper>
             </Container>
         </S.StyledMain>
     );

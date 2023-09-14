@@ -10,6 +10,18 @@ const StyledMain = styled.div`
   position: relative;
 `
 
+const MainWrapper = styled.div`
+  margin: 120px 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap:50px;
+
+  @media ${Theme.media.tablet} {
+    justify-content: center;
+  }
+`
+
 const Frame = styled.div`
   position: relative;
   z-index: 0;
@@ -88,8 +100,18 @@ const MainTitle = styled.h1`
   color: #D9D9D9;
 
   ${font({family: '"Poppins", "sans-serif"', weight: 700, Fmax: 58, Fmin: 30})}
+  
   p {
     display: none;
+  }
+
+  @media ${Theme.media.tablet} {
+    font-size: 30px;
+    font-weight:600;
+  }
+
+  @media ${Theme.media.tablet} {
+    font-size: 25px;
   }
 `
 
@@ -112,6 +134,7 @@ const Welcome = styled.span`
 
 export const S = {
     StyledMain,
+    MainWrapper,
     Frame,
     WelcomeWrapper,
     Photo,
