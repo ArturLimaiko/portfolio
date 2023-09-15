@@ -11,19 +11,19 @@ const SocialItemData = [
         src: instagram,
         width: "40px",
         height: "40px",
-        alt:"icon instagram"
+        alt: "icon instagram"
     },
     {
         src: telegram,
         width: "40px",
         height: "40px",
-        alt:"icon telegram"
+        alt: "icon telegram"
     },
     {
         src: linkedin,
         width: "40px",
         height: "40px",
-        alt:"icon linkedin"
+        alt: "icon linkedin"
     }
 ]
 
@@ -38,7 +38,8 @@ export const Footer: React.FC = () => {
                                 return (
                                     <S.SocialItem key={index}>
                                         <a href="#" aria-label="иконка">
-                                            <img src={socialItem.src} width={socialItem.width} height={socialItem.height}
+                                            <img src={socialItem.src} width={socialItem.width}
+                                                 height={socialItem.height}
                                                  alt={socialItem.alt}/>
                                         </a>
                                     </S.SocialItem>

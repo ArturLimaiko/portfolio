@@ -16,28 +16,29 @@ const NavLink = styled(Link)`
   font-size: 20px;
   line-height: 26px;
 
-  &:hover , &.active {
+  &:hover, &.active {
     background: linear-gradient(270deg, rgba(231, 15, 170, 1) 35%, rgba(0, 192, 253, 1) 65%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
     &::before {
       transform: scaleX(1);
       transition: ${Theme.animations.transition};
     }
   }
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 2px;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(270deg, rgba(231, 15, 170, 1) 35%, rgba(0, 192, 253, 1) 65%);
-      transform: scaleX(0);
-      transition: transform ${Theme.animations.transition};
-    }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(270deg, rgba(231, 15, 170, 1) 35%, rgba(0, 192, 253, 1) 65%);
+    transform: scaleX(0);
+    transition: transform ${Theme.animations.transition};
+  }
 `
 
 

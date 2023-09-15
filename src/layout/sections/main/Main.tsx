@@ -3,7 +3,6 @@ import photo from '../../../assets/images/photo.webp';
 import {Container} from '../../../components/Container';
 import {S} from "./Main_Styles";
 import Typewriter from 'typewriter-effect';
-import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
@@ -17,7 +16,7 @@ export const Main: React.FC = () => {
                             <p>A web developer.</p>
                             <Typewriter
                                 options={{
-                                    strings: ['A web developer.', 'Designer?' , 'Manager?'],
+                                    strings: ['A web developer.', 'Designer?', 'Manager?'],
                                     autoStart: true,
                                     loop: true,
                                     delay: 100,
@@ -25,9 +24,9 @@ export const Main: React.FC = () => {
                             />
                         </S.MainTitle>
                     </S.WelcomeWrapper>
-                        <S.Frame>
-                            <S.Photo src={photo} alt="photo developer"/>
-                        </S.Frame>
+                    <S.Frame>
+                        <S.Photo src={photo} alt="photo developer"/>
+                    </S.Frame>
                 </S.MainWrapper>
             </Container>
         </S.Main>
