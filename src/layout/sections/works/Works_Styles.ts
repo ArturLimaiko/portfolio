@@ -27,8 +27,10 @@ const Work = styled.div`
   flex-grow: 1;
 
   @media ${Theme.media.desktop} {
+    width: 375px;
     max-width: 375px;
   }
+  
 `
 
 const WorkWrapper = styled.div`

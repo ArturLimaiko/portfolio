@@ -4,7 +4,7 @@ import telegram from '../../assets/images/telegram.svg'
 import linkedin from '../../assets/images/linkedin.svg'
 import {Container} from "../../components/Container";
 import {S} from "./Footer_Styled";
-
+import {Fade} from "react-awesome-reveal";
 
 const SocialItemData = [
     {

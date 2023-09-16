@@ -6,6 +6,7 @@ import {Container} from '../../../components/Container';
 import {SectionTitle} from '../../../components/SectionTitle';
 import {S} from "./Skills_Styles";
 
+
 const skillData = [
     {
         iconId: "html",
@@ -66,14 +67,14 @@ export const Skills = () => {
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText> Technologies I’ve been working with recently</SectionText>
                 <FlexWrapper wrap={"wrap"} justify={"center"} gap={"30px 80px"}>
-                    {skillData.map((skills,index) => {
-                        return <Skill iconId={skills.iconId} key={index}
-                                      title={skills.title}
-                                      viewBox={skills.viewBox}
-                                      width={skills.width}
-                                      height={skills.height}
-                        />
-                    })}
+                        {skillData.map((skills,index) => {
+                            return <Skill iconId={skills.iconId} key={index}
+                                          title={skills.title}
+                                          viewBox={skills.viewBox}
+                                          width={skills.width}
+                                          height={skills.height}
+                            />
+                        })}
                 </FlexWrapper>
             </Container>
         </S.Skills>
